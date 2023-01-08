@@ -1,0 +1,135 @@
+.catalog
+	padding-bottom: 100px
+	.title
+		text-transform: uppercase
+		text-align: center
+		font-size: 30px
+		font-weight: 300
+		margin-bottom: 46px
+	&__tabs
+		margin-bottom: 57px
+		list-style-type: none
+		display: flex
+		justify-content: center
+		gap: 10px
+		cursor: pointer
+	&__tab
+		width: 222px
+		height: 52px
+		line-height: 50px
+		border: 2px solid #D0D0D0
+		color: #6b6b6b
+		transform: skewX(-25deg)
+		font-size: 18px
+		font-weight: 300
+		text-transform: uppercase
+		text-align: center
+		transition: .3s
+		div
+			transform: skewX(25deg)
+		&:hover
+			box-shadow: 3px 3px 20px $main-color
+			border: none
+		&_active
+			background: $main-color
+			color: #fff
+			border: none
+		
+	.products
+		display: none
+		flex-wrap: wrap
+		justify-content: space-between
+		gap: 15px 0
+		&_active
+			display: flex
+		.card
+			padding: 20px 18px
+			width: 300px
+			border: 2px solid #E8E8E8
+			overflow: hidden
+			&__wrapper
+				display: flex
+				width: calc(200% + 40px)
+				overflow: hidden
+			&__content
+				width: 50%
+				margin-right: 0px
+				transform: translateX(-100%)
+				transition: .5s
+				&_active
+					transform: translateX(0%)
+					margin-right: 20px
+			&__list
+				width: 50%
+				margin-left: 20px
+				text-align: center
+				transform: translateX(0%)
+				transition: .5s
+				&::after
+					content: ''
+					display: block
+					margin: 24px 0 17px
+					width: 92%
+					height: 2px
+					background-color: #E8E8E8
+				&_active
+					transform: translateX(-100%)
+					margin-left: 5px
+				.link-back
+					text-transform: uppercase
+					color: $main-color
+					font-size: 14px
+					padding-right: 19px
+					
+				ul
+					padding-left: 12px
+					margin-bottom: 49px
+					text-align: left
+					padding-right: 20px
+					li
+						font-size: 14px
+						color: $main-color
+						list-style-type: square
+						span
+							color: #555
+			&_photo
+				display: flex
+				justify-content: center
+				img
+					max-width: 100%
+			&__text
+				text-align: center
+				font-size: 14px
+				&::after
+					content: ''
+					display: block
+					margin: 17px 0
+					width: 100%
+					height: 2px
+					background-color: #E8E8E8
+				.label
+					font-weight: 500
+					font-size: 16px
+				.descr
+					line-height: 22.26px
+				.link-more
+					text-transform: uppercase
+					color: $main-color
+					text-decoration: underline
+			.price_holder
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.price
+					&_old
+						color: #555
+						font-size: 14px
+						text-decoration: line-through
+					&_current
+						color: #000
+						font-size: 20px
+						font-weight: 700
+				.btn
+					width: 135px
+					height: 44px
+					font-size: 14px

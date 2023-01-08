@@ -1,0 +1,24 @@
+.feed-form
+	display: flex
+	flex-direction: column
+	width: 300px
+	input
+		height: 54px
+		border-radius: 5px
+		background-color: #fff
+		border: none
+		padding: 0 21px
+		&:not(:first-of-type)
+			margin-top: 12px
+		&.error
+			border: 2px solid $main-color
+			color: black
+	button
+		margin-top: 20px
+	.error
+		font-size: 14px
+		text-align-last: left
+		&:before
+			content: '*'
+			color: $main-color
+	
